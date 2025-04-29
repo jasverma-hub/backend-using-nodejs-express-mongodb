@@ -1,7 +1,8 @@
 // db.js
 const mongoose = require('mongoose');
+require('dotenv').config(); // Load environment variables from .env file
 
-const dbURI = 'mongodb://127.0.0.1:27017/appice'; // Replace with your MongoDB URI
+const dbURI = process.env.MONGO_URI; // Replace with your MongoDB URI
 
 const connectDB = async () => {
   try {
